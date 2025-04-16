@@ -25,7 +25,7 @@ export default function RootLayout({
           <VsCodeSidebar />
 
           {/* Main content area */}
-          <main className="flex-1 bg-[#1e1e1e] overflow-auto">{children}</main>
+          <main className="flex-1 bg-[#23242f] overflow-auto">{children}</main>
         </div>
       </body>
     </html>

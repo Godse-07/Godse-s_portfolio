@@ -13,8 +13,9 @@ import {
   LucideIcon,
   GitBranch,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-// Interface definitions
+
 interface IconItem {
   id: string;
   icon: LucideIcon;
@@ -36,7 +37,6 @@ interface ExpandedFolders {
   [key: string]: boolean;
 }
 
-// Main component that combines both sidebars
 export const VsCodeSidebar: React.FC = () => {
   const [activeIcon, setActiveIcon] = useState<string>("file");
   const [isPanelOpen, setIsPanelOpen] = useState<boolean>(true);
@@ -57,7 +57,7 @@ export const VsCodeSidebar: React.FC = () => {
   );
 };
 
-// The fixed left sidebar with icons
+
 const IconSidebar: React.FC<IconSidebarProps> = ({
   activeIcon,
   setActiveIcon,
@@ -76,10 +76,8 @@ const IconSidebar: React.FC<IconSidebarProps> = ({
 
   const handleIconClick = (id: string): void => {
     if (activeIcon === id && isPanelOpen) {
-      // If clicking the active icon, toggle panel visibility
       setIsPanelOpen(!isPanelOpen);
     } else {
-      // Otherwise set the active icon and ensure panel is open
       setActiveIcon(id);
       setIsPanelOpen(true);
     }
@@ -134,7 +132,7 @@ const PanelSidebar: React.FC<PanelSidebarProps> = ({ activeIcon }) => {
   };
 
   return (
-    <div className="bg-[#1e1f29] w-64 h-full overflow-y-auto">
+    <div className="bg-[#1e1f29] w-47 h-full overflow-y-auto">
       {renderPanelContent()}
     </div>
   );
@@ -147,6 +145,8 @@ const FilesPanel: React.FC = () => {
     frontend: false,
     backend: false,
   });
+
+  const router = useRouter();
 
   const toggleFolder = (folder: string): void => {
     setExpandedFolders((prev) => ({
@@ -165,7 +165,7 @@ const FilesPanel: React.FC = () => {
         {/* Portfolio folder structure */}
         <div>
           <div
-            className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]"
+            className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl"
             onClick={() => toggleFolder("projects")}
           >
             {expandedFolders.projects ? (
@@ -179,7 +179,7 @@ const FilesPanel: React.FC = () => {
           {expandedFolders.projects && (
             <div className="ml-4">
               <div
-                className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]"
+                className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl"
                 onClick={() => toggleFolder("frontend")}
               >
                 {expandedFolders.frontend ? (
@@ -192,15 +192,23 @@ const FilesPanel: React.FC = () => {
 
               {expandedFolders.frontend && (
                 <div className="ml-4">
-                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]">
+                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
                     <FileText size={16} className="text-blue-400" />
-                    <span className="ml-1 text-sm">React.js</span>
+                    <span className="ml-1 text-sm">
+                    <button onClick={
+                        ()=>{
+                          router.push("/home");
+                        }
+                      }>
+                        Home
+                      </button>
+                    </span>
                   </div>
-                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]">
+                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
                     <FileText size={16} className="text-blue-400" />
                     <span className="ml-1 text-sm">Next.js</span>
                   </div>
-                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]">
+                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
                     <FileText size={16} className="text-orange-400" />
                     <span className="ml-1 text-sm">TailwindCSS</span>
                   </div>
