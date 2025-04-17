@@ -14,6 +14,7 @@ import {
   GitBranch,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 interface IconItem {
@@ -193,20 +194,26 @@ const FilesPanel: React.FC = () => {
               {expandedFolders.frontend && (
                 <div className="ml-4">
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <FileText size={16} className="text-blue-400" />
+                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
                     <span className="ml-1 text-sm">
                     <button onClick={
                         ()=>{
                           router.push("/home");
                         }
                       }>
-                        Home
+                        Home.tsx
                       </button>
                     </span>
                   </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <FileText size={16} className="text-blue-400" />
-                    <span className="ml-1 text-sm">Next.js</span>
+                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <span className="ml-1 text-sm">
+                      <button onClick={()=>{
+                        router.push("/contact");
+                      }}>
+                      Contact.tsx
+                      </button>
+                    </span>
                   </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
                     <FileText size={16} className="text-orange-400" />
