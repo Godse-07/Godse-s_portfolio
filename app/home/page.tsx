@@ -1,40 +1,85 @@
+'use client';
+
 import Home_animation from "@/components/Home_animation";
 import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-5">
-      <div>
-        <h1 style={{ color: "#f3de8a" }} className="text-3xl">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <motion.h1 
+          style={{ color: "#f3de8a" }} 
+          className="text-3xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+        >
           Pushan Mukhopadhyay
-        </h1>
-        <h2 className="text-center border-b-1 mt-2">Full Stack Developer</h2>
-      </div>
+        </motion.h1>
+        <motion.h2 
+          className="text-center border-b-1 mt-2"
+          initial={{ opacity: 0, width: "0%" }}
+          animate={{ opacity: 1, width: "100%" }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          Full Stack Developer
+        </motion.h2>
+      </motion.div>
 
-      <div className="w-2/3 flex flex-col gap-5 mt-5">
-        <div className="flex flex-col gap-4">
-          <h2 className="leading-relaxed text-1xl">
+      <motion.div 
+        className="w-2/3 flex flex-col gap-5 mt-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.8 }}
+      >
+        <motion.div 
+          className="flex flex-col gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.6 }}
+        >
+          <motion.h2 className="leading-relaxed text-1xl">
             Hi, I am Pushan Mukhopadhyay, a full stack web developer. I build
             elegant, responsive web applications with modern technologies. I am
             currently learning Next.js and started exploring Blockchain domain.
-          </h2>
-          <h2 className="leading-relaxed text-1xl">
+          </motion.h2>
+          <motion.h2 className="leading-relaxed text-1xl">
             I am a passionate developer who loves to learn new technologies and
             build projects that make a difference. I am focused on clean code
             and intuitive user experiences.
-          </h2>
-        </div>
+          </motion.h2>
+        </motion.div>
 
-        <div className="flex ">
+        <motion.div 
+          className="flex"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1, duration: 0.7 }}
+        >
           <div className="flex flex-col gap-3">
-            <h1 style={{ color: "#f3de8a" }} className="text-3xl">
+            <motion.h1 
+              style={{ color: "#f3de8a" }} 
+              className="text-3xl"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
               Experience
-            </h1>
-            <h2 className="leading-relaxed text-1xl ml-5">
+            </motion.h1>
+            <motion.h2 className="leading-relaxed text-1xl ml-5">
               I have worked as a Teaching Assistant at{" "}
               <span style={{ color: "#f3de8a" }}>Coding Ninja</span>.
-            </h2>
-            <div className="ml-10">
+            </motion.h2>
+            <motion.div 
+              className="ml-10"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.3, duration: 0.5 }}
+            >
               <span>&#x2022; I solved 500+ DSA doubts</span>
               <br />
               <span>
@@ -44,44 +89,67 @@ const page = () => {
               <span>
                 &#x2022; I helped Coding Ninjas organize coding contests on their platform
               </span>
-            </div>
+            </motion.div>
           </div>
-          <Home_animation />
-        </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.5, duration: 0.7 }}
+          >
+            <Home_animation />
+          </motion.div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3">
-          <h1 style={{ color: "#f3de8a" }} className="text-3xl">
+        <motion.div 
+          className="flex flex-col gap-3"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.7, duration: 0.7 }}
+        >
+          <motion.h1 
+            style={{ color: "#f3de8a" }} 
+            className="text-3xl"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
             Writing
-          </h1>
-          <h2 className="leading-relaxed text-1xl ml-5">
+          </motion.h1>
+          <motion.h2 className="leading-relaxed text-1xl ml-5">
             I have written articles on various topics related to web
             development, programming languages, and technology trends. You can
             find my articles on
-            <a
+            <motion.a
               href="https://medium.com/@mukhopadhyaypushan42"
               className="underline underline-offset-8"
+              whileHover={{ color: "#f3de8a" }}
+              transition={{ duration: 0.3 }}
             >
               {" "}
               Medium
-            </a>
-          </h2>
-        </div>
+            </motion.a>
+          </motion.h2>
+        </motion.div>
 
-        <div className="flex flex-col gap-3">
-          <h1
-            style={{
-              color: "#f3de8a",
-            }}
+        <motion.div 
+          className="flex flex-col gap-3"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.9, duration: 0.7 }}
+        >
+          <motion.h1
+            style={{ color: "#f3de8a" }}
             className="text-3xl"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             Free Time
-          </h1>
-          <h2 className="leading-relaxed text-1xl ml-5">
+          </motion.h1>
+          <motion.h2 className="leading-relaxed text-1xl ml-5">
             In my leisure time, I love to play games, watch movies. And one day
             I want to travel India in bike.
-          </h2>
-        </div>
-      </div>
+          </motion.h2>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

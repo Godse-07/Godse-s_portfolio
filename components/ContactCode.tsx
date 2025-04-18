@@ -47,7 +47,7 @@ const ContactCode = () => {
   return (
     <div className={styles.code} style={{ borderRadius: '15%' }}>
       <p className={styles.line}>
-        <span className={styles.className}>.socials</span> &#123;
+        <span className={styles.className} style={{color: "#f3de8a"}}>.socials</span> &#123;
       </p>
       {contactItems.map((item, index) => (
         <p className={styles.line} key={index}>
