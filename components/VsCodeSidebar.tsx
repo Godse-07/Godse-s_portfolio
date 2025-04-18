@@ -216,8 +216,16 @@ const FilesPanel: React.FC = () => {
                     </span>
                   </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <FileText size={16} className="text-orange-400" />
-                    <span className="ml-1 text-sm">TailwindCSS</span>
+                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <span className="ml-1 text-sm">
+                      <button onClick={
+                        ()=>{
+                          router.push("/skills")
+                        }
+                      }>
+                        Skills.tsx
+                      </button>
+                    </span>
                   </div>
                 </div>
               )}
