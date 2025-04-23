@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const page = () => {
   return (
     <motion.div
-      className="min-h-screen flex flex-col gap-20 pb-20"
+      className="min-h-screen flex flex-col gap-5 pb-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -120,9 +121,29 @@ const page = () => {
         </div>
       </motion.div>
 
+      {/* Github repo and live demo */}
+
+      <motion.div
+        className="w-2/6 mx-auto flex justify-center gap-5 h-[90px] items-center bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl shadow-lg mb-10 hover:shadow-2xl transition-all duration-300"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.7 }}
+      >
+        <Link href="https://github.com/Godse-07/ConnectTwitter">
+          <span className="text-blue-400 underline hover:text-blue-600">
+            Source Code
+          </span>
+        </Link>
+        <Link href="https://twitblock.vercel.app/">
+          <span className="text-green-400 underline hover:text-green-600">
+            Live Demo
+          </span>
+        </Link>
+      </motion.div>
+
       {/* TechStack */}
       <motion.div
-        className="w-2/3 mx-auto flex justify-center h-[150px] items-center bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl shadow-lg mb-10 hover:shadow-2xl transition-all duration-300"
+        className="w-2/3 mx-auto flex justify-center h-[160px] items-center bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl shadow-lg mb-10 hover:shadow-2xl transition-all duration-300"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.7 }}
@@ -131,19 +152,39 @@ const page = () => {
           <h1>Tech Stack</h1>
           <div className="flex gap-8 mt-5">
             <div>
-              <Image src={"/Next.js.png"} alt="next js" width={50} height={50} />
+              <Image
+                src={"/Next.js.png"}
+                alt="next js"
+                width={50}
+                height={50}
+              />
               <p className="mt-2">Next js</p>
             </div>
             <div>
-              <Image src={"/Solidity.png"} alt="solidity" width={50} height={50} />
+              <Image
+                src={"/Solidity.png"}
+                alt="solidity"
+                width={50}
+                height={50}
+              />
               <p className="mt-2">Solidity</p>
             </div>
             <div>
-              <Image src={"/Tailwind CSS.png"} alt="tailwind" width={50} height={50} />
+              <Image
+                src={"/Tailwind CSS.png"}
+                alt="tailwind"
+                width={50}
+                height={50}
+              />
               <p className="mt-2">Tailwind CSS</p>
             </div>
             <div>
-              <Image src={"/TypeScript.png"} alt="Typescript" width={50} height={50} />
+              <Image
+                src={"/TypeScript.png"}
+                alt="Typescript"
+                width={50}
+                height={50}
+              />
               <p className="mt-2">Typescript</p>
             </div>
             <div>
