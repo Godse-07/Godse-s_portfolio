@@ -189,6 +189,9 @@ const page = () => {
                 <motion.div whileHover={{ scale: 1.2, rotate: 5 }}>
                   <Image src="/MySQL.png" alt="sql" height={30} width={30} />
                 </motion.div>
+                <motion.div whileHover={{ scale: 1.2, rotate: 5 }}>
+                  <Image src="/Firebase.png" alt="firebase" height={30} width={30} />
+                </motion.div>
               </div>
             </div>
           </div>

@@ -174,7 +174,13 @@ const FilesPanel: React.FC = () => {
             ) : (
               <ChevronRight size={16} />
             )}
-            <span className="ml-1 text-sm">PORTFOLIO</span>
+            <span className="ml-1 text-sm">
+              <button onClick={()=>{
+                router.push("/");
+              }}>
+              PORTFOLIO
+              </button>
+            </span>
           </div>
 
           {expandedFolders.projects && (
@@ -227,7 +233,52 @@ const FilesPanel: React.FC = () => {
                       </button>
                     </span>
                   </div>
+
+                  
+
+
+                  <div
+                className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]"
+                onClick={() => toggleFolder("backend")}
+              >
+                {expandedFolders.backend ? (
+                  <ChevronDown size={16} />
+                ) : (
+                  <ChevronRight size={16} />
+                )}
+                <span className="ml-1 text-sm">Projects</span>
+              </div>
+
+              {expandedFolders.backend && (
+                <div className="ml-4">
+                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
+                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <span className="ml-1 text-sm">
+                      <button onClick={
+                        ()=>{
+                          router.push("/projects/upcoming/")
+                        }
+                      }>
+                        Upcoming.tsx
+                      </button>
+                    </span>
+                  </div>
+                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]">
+                    <FileText size={16} className="text-yellow-400" />
+                    <span className="ml-1 text-sm">Express.js</span>
+                  </div>
                 </div>
+              )}
+
+
+
+
+                </div>
+
+
+              
+
+
               )}
 
               <div

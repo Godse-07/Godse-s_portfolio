@@ -5,6 +5,7 @@ import Image from "next/image";
 const images = [
   "/MongoDB.png",
   "/MySQL.png",
+  "/Firebase.png"
 ];
 
 const Databaseslider = () => {

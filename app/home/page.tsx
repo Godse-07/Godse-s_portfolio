@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-5">
+    <div className="flex h-full flex-col items-center justify-center gap-5">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

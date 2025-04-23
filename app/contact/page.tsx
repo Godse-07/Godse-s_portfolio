@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const page = () => {
   return (
-    <div className='flex justify-center items-center flex-col h-screen gap-10'>
+    <div className='flex justify-center items-center flex-col h-full gap-10'>
       <motion.h1 
         className='text-3xl'
         style={{color: "#f3de8a"}}
