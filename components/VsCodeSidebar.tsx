@@ -365,12 +365,12 @@ const GitPanel: React.FC = () => {
       <div className="p-2 text-sm">
         <div className="flex items-center mb-2">
           <GitBranch size={16} className="mr-2" />
-          <span>main</span>
+          <span>master</span>
         </div>
         <div className="text-blue-400 flex items-center hover:underline">
           <ExternalLink size={14} className="mr-1" />
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Godse-07"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -390,7 +390,7 @@ const AboutPanel: React.FC = () => {
       </div>
       <div className="p-2 text-sm text-gray-300">
         <p className="mb-2">Full Stack Developer</p>
-        <p className="mb-2">Based in [Your Location]</p>
+        <p className="mb-2">Based in kolkata</p>
         <p>Passionate about building exceptional web experiences</p>
       </div>
     </div>
@@ -406,17 +406,17 @@ const ContactPanel: React.FC = () => {
       <div className="p-2 text-sm">
         <div className="mb-2">
           <div className="text-gray-400">Email</div>
-          <div className="text-blue-400">your.email@example.com</div>
+          <div className="text-blue-400">mukhopadhyaypushan42 <br /> @gmail.com</div>
         </div>
         <div className="mb-2">
           <div className="text-gray-400">LinkedIn</div>
           <div className="text-blue-400 hover:underline">
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/pushan-mukhopadhyay-2b326a243/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin.com/in/yourusername
+              Pushan Mukhopadhyay
             </a>
           </div>
         </div>
@@ -474,15 +474,15 @@ const DashboardPanel: React.FC = () => {
       <div className="p-2 text-sm">
         <div className="flex items-center justify-between mb-2 p-1 hover:bg-[#2a2d2e]">
           <span>Recent Projects</span>
-          <span className="text-gray-400">3</span>
-        </div>
-        <div className="flex items-center justify-between mb-2 p-1 hover:bg-[#2a2d2e]">
-          <span>Ongoing Tasks</span>
           <span className="text-gray-400">2</span>
         </div>
         <div className="flex items-center justify-between mb-2 p-1 hover:bg-[#2a2d2e]">
+          <span>Ongoing Tasks</span>
+          <span className="text-gray-400">1</span>
+        </div>
+        <div className="flex items-center justify-between mb-2 p-1 hover:bg-[#2a2d2e]">
           <span>Completed</span>
-          <span className="text-gray-400">7</span>
+          <span className="text-gray-400">4</span>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const contactItems = [
     social: 'medium',
     link: 'mukhopadhyaypushan42',
     href: 'https://medium.com/@mukhopadhyaypushan42',
-  }
+  },
 ];
 
 const ContactCode = () => {
