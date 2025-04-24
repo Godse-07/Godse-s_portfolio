@@ -263,9 +263,17 @@ const FilesPanel: React.FC = () => {
                       </button>
                     </span>
                   </div>
-                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]">
-                    <FileText size={16} className="text-yellow-400" />
-                    <span className="ml-1 text-sm">Express.js</span>
+                  <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
+                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <span className="ml-1 text-sm">
+                      <button onClick={
+                        ()=>{
+                          router.push("/projects/completed/")
+                        }
+                      }>
+                        Completed.tsx
+                      </button>
+                    </span>
                   </div>
                 </div>
               )}

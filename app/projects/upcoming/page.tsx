@@ -49,7 +49,7 @@ const page = () => {
         <div className="w-[1px] h-32 bg-gray-300 mx-5"></div>
 
         {/* description */}
-        <div className="relative w-2/3 mt-10 group">
+        <div className="relative w-2/3 group">
           {/* Preview card */}
           <motion.div
             className="h-[150px] p-4 bg-[#1e1f29] rounded-xl text-white shadow-md cursor-pointer"
