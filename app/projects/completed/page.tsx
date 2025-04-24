@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <motion.div 
+    <motion.div
       className="min-h-screen flex flex-col justify-center items-center gap-6 mt-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <motion.h1 
-        className="text-3xl" 
+      <motion.h1
+        className="text-3xl"
         style={{ color: "#f3de8a" }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,15 +24,15 @@ const page = () => {
       </motion.h1>
 
       {/* 1st project card */}
-      <motion.div 
+      <motion.div
         className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         whileHover={{ scale: 1.02 }}
       >
-        <motion.h1 
-          className="text-2xl" 
+        <motion.h1
+          className="text-2xl"
           style={{ color: "#f3de8a" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -59,7 +59,7 @@ const page = () => {
           </motion.div>
 
           {/* white line */}
-          <motion.div 
+          <motion.div
             className="w-[1px] h-32 bg-gray-300 mx-5"
             initial={{ height: 0 }}
             animate={{ height: "8rem" }}
@@ -67,7 +67,7 @@ const page = () => {
           ></motion.div>
 
           {/* details */}
-          <motion.div 
+          <motion.div
             className="relative w-2/3 group"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -141,7 +141,7 @@ const page = () => {
         </div>
 
         {/* Code and Live link */}
-        <motion.div 
+        <motion.div
           className="flex justify-around items-center gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const page = () => {
         </motion.div>
 
         {/* TechStack */}
-        <motion.div 
+        <motion.div
           className="flex justify-center items-center gap-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -201,15 +201,15 @@ const page = () => {
       </motion.div>
 
       {/* 2nd project */}
-      <motion.div 
+      <motion.div
         className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
         whileHover={{ scale: 1.02 }}
       >
-        <motion.h1 
-          className="text-2xl" 
+        <motion.h1
+          className="text-2xl"
           style={{ color: "#f3de8a" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -236,7 +236,7 @@ const page = () => {
           </motion.div>
 
           {/* white line */}
-          <motion.div 
+          <motion.div
             className="w-[1px] h-32 bg-gray-300 mx-5"
             initial={{ height: 0 }}
             animate={{ height: "8rem" }}
@@ -244,7 +244,7 @@ const page = () => {
           ></motion.div>
 
           {/* details */}
-          <motion.div 
+          <motion.div
             className="relative w-2/3 group"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -321,7 +321,7 @@ const page = () => {
         </div>
 
         {/* Code and Live link */}
-        <motion.div 
+        <motion.div
           className="flex justify-around items-center gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -340,7 +340,7 @@ const page = () => {
         </motion.div>
 
         {/* TechStack */}
-        <motion.div 
+        <motion.div
           className="flex justify-center items-center gap-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -376,15 +376,15 @@ const page = () => {
       </motion.div>
 
       {/* 3rd Project */}
-      <motion.div 
+      <motion.div
         className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
         whileHover={{ scale: 1.02 }}
       >
-        <motion.h1 
-          className="text-2xl" 
+        <motion.h1
+          className="text-2xl"
           style={{ color: "#f3de8a" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -411,7 +411,7 @@ const page = () => {
           </motion.div>
 
           {/* white line */}
-          <motion.div 
+          <motion.div
             className="w-[1px] h-32 bg-gray-300 mx-5"
             initial={{ height: 0 }}
             animate={{ height: "8rem" }}
@@ -419,7 +419,7 @@ const page = () => {
           ></motion.div>
 
           {/* details */}
-          <motion.div 
+          <motion.div
             className="relative w-2/3 group"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -497,7 +497,7 @@ const page = () => {
         </div>
 
         {/* Code and Live link */}
-        <motion.div 
+        <motion.div
           className="flex justify-around items-center gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -516,7 +516,7 @@ const page = () => {
         </motion.div>
 
         {/* TechStack */}
-        <motion.div 
+        <motion.div
           className="flex justify-center items-center gap-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -548,15 +548,15 @@ const page = () => {
       </motion.div>
 
       {/* 4th project */}
-      <motion.div 
+      <motion.div
         className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.8 }}
         whileHover={{ scale: 1.02 }}
       >
-        <motion.h1 
-          className="text-2xl" 
+        <motion.h1
+          className="text-2xl"
           style={{ color: "#f3de8a" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -583,7 +583,7 @@ const page = () => {
           </motion.div>
 
           {/* white line */}
-          <motion.div 
+          <motion.div
             className="w-[1px] h-32 bg-gray-300 mx-5"
             initial={{ height: 0 }}
             animate={{ height: "8rem" }}
@@ -591,7 +591,7 @@ const page = () => {
           ></motion.div>
 
           {/* details */}
-          <motion.div 
+          <motion.div
             className="relative w-2/3 group"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -668,7 +668,7 @@ const page = () => {
         </div>
 
         {/* Code and Live link */}
-        <motion.div 
+        <motion.div
           className="flex justify-around items-center gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -687,19 +687,14 @@ const page = () => {
         </motion.div>
 
         {/* TechStack */}
-        <motion.div 
+        <motion.div
           className="flex justify-center items-center gap-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.5 }}
         >
           <div className="flex flex-col gap-2">
-            <Image
-              src={"/Flutter.png"}
-              alt="flutter"
-              height={50}
-              width={50}
-            />
+            <Image src={"/Flutter.png"} alt="flutter" height={50} width={50} />
             <p>Flutter</p>
           </div>
           <div className="flex flex-col gap-2">
@@ -724,149 +719,148 @@ const page = () => {
 
       {/* 5th project */}
 
-<motion.div 
-  className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 1, duration: 0.8 }}
-  whileHover={{ scale: 1.02 }}
->
-  <motion.h1 
-    className="text-2xl" 
-    style={{ color: "#f3de8a" }}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 1.2, duration: 0.5 }}
-  >
-    QMail
-  </motion.h1>
-
-  {/* logo and details */}
-  <div className="flex justify-around items-center">
-    {/* logo */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 1.4, duration: 0.5 }}
-    >
-      <Image
-        src={"/Qmail.jpg"}
-        alt="qmail"
-        height={150}
-        width={150}
-        className="rounded-full"
-      />
-    </motion.div>
-
-    {/* white line */}
-    <div className="w-[1px] h-32 bg-gray-300 mx-5"></div>
-
-    {/* details */}
-    <div className="relative w-2/3 group">
-      <p>
-        Qmail is a secure and intelligent mailing platform designed for
-        fast, authenticated communication. With built-in verification and
-        modern encryption, it ensures trusted message exchange—ideal for
-        users who prioritize privacy, speed, and smart communication in a
-        digital-first world. ✉️🔐.........
-      </p>
-      <div
-        className="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300"
-        style={{ overflow: "auto" }}
+      <motion.div
+        className="h-[450px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-center gap-4 hover:shadow-2xl transition-all duration-300"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+        whileHover={{ scale: 1.02 }}
       >
-        {/* pop out */}
-        <div className="bg-[#2e2f3a] text-white w-[80%] max-w-3xl p-8 rounded-2xl shadow-2xl m-4">
-          <h2 className="text-2xl font-bold mb-4">Description:</h2>
-          <p className="mb-6">
-            Qmail is a secure and intelligent mailing platform designed to
-            streamline digital communication with verified users. Focused
-            on privacy and trust, Qmail uses smart authentication and
-            modern encryption to ensure safe, fast, and reliable message
-            delivery. Ideal for professionals, teams, and organizations,
-            it integrates role-based access and real-time notifications
-            for enhanced productivity.
-            <br />
-            With a clean interface and advanced security measures, Qmail
-            redefines how secure emails should work—fast, verifiable, and
-            tamper-proof.
-          </p>
+        <motion.h1
+          className="text-2xl"
+          style={{ color: "#f3de8a" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+          QMail
+        </motion.h1>
 
-          <h3 className="text-xl font-semibold mb-2">✅ Key Features:</h3>
-          <ul className="list-disc list-inside space-y-1 mb-4">
-            <li>
-              Verified Communication: Only authenticated users can send
-              and receive messages.
-            </li>
-            <li>
-              End-to-End Encryption: Keeps conversations private and
-              secure.
-            </li>
-            <li>
-              Smart Inbox: Prioritizes important emails with AI-powered
-              sorting.
-            </li>
-            <li>
-              Access Control: Role-based message viewing and permission
-              settings.
-            </li>
-          </ul>
+        {/* logo and details */}
+        <div className="flex justify-around items-center">
+          {/* logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 1.4, duration: 0.5 }}
+          >
+            <Image
+              src={"/Qmail.jpg"}
+              alt="qmail"
+              height={150}
+              width={150}
+              className="rounded-full"
+            />
+          </motion.div>
 
-          <h3 className="text-xl font-semibold mb-2">
-            🌟 Why It Matters:
-          </h3>
-          <ul className="list-disc list-inside space-y-1">
-            <li>
-              Protects against phishing, spam, and unauthorized access.
-            </li>
-            <li>
-              Enhances trust in digital communication for professionals
-              and teams.
-            </li>
-            <li>
-              Increases productivity through smarter, faster, and safer
-              email handling.
-            </li>
-          </ul>
+          {/* white line */}
+          <div className="w-[1px] h-32 bg-gray-300 mx-5"></div>
+
+          {/* details */}
+          <div className="relative w-2/3 group">
+            <p>
+              Qmail is a secure and intelligent mailing platform designed for
+              fast, authenticated communication. With built-in verification and
+              modern encryption, it ensures trusted message exchange—ideal for
+              users who prioritize privacy, speed, and smart communication in a
+              digital-first world. ✉️🔐.........
+            </p>
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300"
+              style={{ overflow: "auto" }}
+            >
+              {/* pop out */}
+              <div className="bg-[#2e2f3a] text-white w-[80%] max-w-3xl p-8 rounded-2xl shadow-2xl m-4">
+                <h2 className="text-2xl font-bold mb-4">Description:</h2>
+                <p className="mb-6">
+                  Qmail is a secure and intelligent mailing platform designed to
+                  streamline digital communication with verified users. Focused
+                  on privacy and trust, Qmail uses smart authentication and
+                  modern encryption to ensure safe, fast, and reliable message
+                  delivery. Ideal for professionals, teams, and organizations,
+                  it integrates role-based access and real-time notifications
+                  for enhanced productivity.
+                  <br />
+                  With a clean interface and advanced security measures, Qmail
+                  redefines how secure emails should work—fast, verifiable, and
+                  tamper-proof.
+                </p>
+
+                <h3 className="text-xl font-semibold mb-2">✅ Key Features:</h3>
+                <ul className="list-disc list-inside space-y-1 mb-4">
+                  <li>
+                    Verified Communication: Only authenticated users can send
+                    and receive messages.
+                  </li>
+                  <li>
+                    End-to-End Encryption: Keeps conversations private and
+                    secure.
+                  </li>
+                  <li>
+                    Smart Inbox: Prioritizes important emails with AI-powered
+                    sorting.
+                  </li>
+                  <li>
+                    Access Control: Role-based message viewing and permission
+                    settings.
+                  </li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-2">
+                  🌟 Why It Matters:
+                </h3>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>
+                    Protects against phishing, spam, and unauthorized access.
+                  </li>
+                  <li>
+                    Enhances trust in digital communication for professionals
+                    and teams.
+                  </li>
+                  <li>
+                    Increases productivity through smarter, faster, and safer
+                    email handling.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Code and Live link */}
-  <div className="flex justify-around items-center gap-6">
-    <Link href="https://github.com/Godse-07/Quick_mail">
-      <span className="text-blue-400 underline hover:text-blue-600">
-        Source Code
-      </span>
-    </Link>
-    <Link href="https://drive.google.com/file/d/1W7E4ZkH3hi_LWY4Q3XGHyVoqZs3dSNwK/view">
-      <span className="text-green-400 underline hover:text-green-600">
-        Video
-      </span>
-    </Link>
-  </div>
+        {/* Code and Live link */}
+        <div className="flex justify-around items-center gap-6">
+          <Link href="https://github.com/Godse-07/Quick_mail">
+            <span className="text-blue-400 underline hover:text-blue-600">
+              Source Code
+            </span>
+          </Link>
+          <Link href="https://drive.google.com/file/d/1W7E4ZkH3hi_LWY4Q3XGHyVoqZs3dSNwK/view">
+            <span className="text-green-400 underline hover:text-green-600">
+              Video
+            </span>
+          </Link>
+        </div>
 
-  {/* TechStack */}
-  <div className="flex justify-center items-center gap-10">
-    <div className="flex flex-col gap-2">
-      <Image src={"/CSharp.png"} alt="c#" height={50} width={50} />
-      <p className="ml-4">C#</p>
-    </div>
-    <div className="flex flex-col gap-2">
-      <Image src={"/HTML5.png"} alt="html" height={50} width={50} />
-      <p>HTML5</p>
-    </div>
-    <div className="flex flex-col gap-2">
-      <Image src={"/CSS3.png"} alt="css" height={50} width={50} />
-      <p>CSS3</p>
-    </div>
-    <div className="flex flex-col gap-2">
-      <Image src={"/MySQL.png"} alt="MySQL" height={50} width={50} />
-      <p>MySQL</p>
-    </div>
-  </div>
-</motion.div>
-
+        {/* TechStack */}
+        <div className="flex justify-center items-center gap-10">
+          <div className="flex flex-col gap-2">
+            <Image src={"/CSharp.png"} alt="c#" height={50} width={50} />
+            <p className="ml-4">C#</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <Image src={"/HTML5.png"} alt="html" height={50} width={50} />
+            <p>HTML5</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <Image src={"/CSS3.png"} alt="css" height={50} width={50} />
+            <p>CSS3</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            <Image src={"/MySQL.png"} alt="MySQL" height={50} width={50} />
+            <p>MySQL</p>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
