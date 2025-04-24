@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
       <div className="w-2/8 ml-70">
         <span>
-            Godse's VsCode
+            Godse&apos;s VsCode
         </span>
       </div>
       <div className="flex gap-2 w-2/8 justify-end mr-2">

@@ -268,7 +268,7 @@ const page = () => {
                 <p className="mb-6">
                   Innox is a powerful platform built to help innovators pitch
                   their ideas and connect with entrepreneurs, investors, and
-                  mentors. Whether you're a startup founder, a student with a
+                  mentors. Whether you&apos;re a startup founder, a student with a
                   groundbreaking idea, or a builder looking for
                   collaboration—Innox is your launchpad. With real-time
                   networking features, pitch showcases, and community engagement
@@ -426,7 +426,7 @@ const page = () => {
             transition={{ delay: 1.2, duration: 0.5 }}
           >
             <p>
-              SafeCircle is a women's safety app designed to provide real-time
+              SafeCircle is a women&apos;s safety app designed to provide real-time
               protection, smart alerts, and community support. Built with
               Flutter, the app empowers users to stay secure with features like
               emergency location sharing, instant SOS alerts, and a live map
@@ -442,7 +442,7 @@ const page = () => {
               <div className="bg-[#2e2f3a] text-white w-[80%] max-w-3xl p-8 rounded-2xl shadow-2xl m-4">
                 <h2 className="text-2xl font-bold mb-4">Description:</h2>
                 <p className="mb-6">
-                  SafeCircle is a women's safety app built with Flutter,
+                  SafeCircle is a women&apos;s safety app built with Flutter,
                   offering real-time protection and peace of mind. It enables
                   users to share their live location, trigger SOS alerts, and
                   stay informed about high-risk areas through an interactive
@@ -623,7 +623,7 @@ const page = () => {
                   to help farmers plan ahead and maximize yield.
                   <br />
                   With an accuracy range of 93% to 98%, FarmGuard is more than
-                  just an app—it's your trusted digital farming assistant.
+                  just an app—it&apos;s your trusted digital farming assistant.
                 </p>
 
                 <h3 className="text-xl font-semibold mb-2">✅ Key Features:</h3>
