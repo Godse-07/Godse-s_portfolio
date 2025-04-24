@@ -6,7 +6,7 @@ const images = [
   "/Vercel.png",
   "/Visual Studio Code (VS Code).png",
   "/Git.png",
-  "/Github.png",
+  "/github.png",
   "/Postman.png",
   "/WebStorm.png",
 ];
