@@ -4,7 +4,7 @@ import Home_animation from "@/components/Home_animation";
 import React from "react";
 import { motion } from "framer-motion";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="flex h-full flex-col items-center justify-center gap-5">
       <motion.div
@@ -154,4 +154,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
