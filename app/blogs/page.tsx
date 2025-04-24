@@ -2,23 +2,55 @@
 
 import { HandHeart, Newspaper } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
 
 const page = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-5">
-      <div className="flex w-2/3 items-center justify-center gap-2 mt-5">
+    <motion.div
+      className="min-h-screen flex flex-col items-center justify-center gap-5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="flex w-2/3 items-center justify-center gap-2 mt-5"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
         <Newspaper />
         <h1 className="text-3xl text-[#f3de8a]">Article</h1>
-      </div>
+      </motion.div>
 
-      <h1>Here are some of my article on Medium. You can checkout <span><button onClick={()=>{
-        window.open("https://medium.com/@mukhopadhyaypushan42", "_blank")
-      }} className="bg-[#f3de8a] text-black px-2 py-2 rounded-full hover:bg-[#f3de8a]/80 transition-all duration-300 cursor-pointer">my Profile</button></span> also</h1>
+      <motion.h1
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        Here are some of my article on Medium. You can checkout{" "}
+        <span>
+          <button
+            onClick={() => {
+              window.open("https://medium.com/@mukhopadhyaypushan42", "_blank");
+            }}
+            className="bg-[#f3de8a] text-black px-2 py-2 rounded-full hover:bg-[#f3de8a]/80 transition-all duration-300 cursor-pointer"
+          >
+            my Profile
+          </button>
+        </span>{" "}
+        also
+      </motion.h1>
 
       {/* 1st row */}
       <div className="flex w-6/7 h-[410px] items-center justify-around m-5">
         {/* 1st box  */}
-        <div className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300">
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300"
+        >
           <img
             src={
               "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*Zd6GzjNvtBMyUfxa"
@@ -32,10 +64,7 @@ const page = () => {
             Let’s have a look at 7 valuable tips and tricks found in the most
             popular language in the world, JavaScript.
             <br />
-            1. Destructuring with Parameters You can use object destructuring
-            within function parameters. A popular use case for this would be
-            something like event listeners, and gaining access to the target
-            property on the event object........
+            1. Destructuring with Parameters...
           </p>
           <div className="flex justify-between items-center w-full px-10 pb-2">
             <div className="flex gap-2">
@@ -54,10 +83,16 @@ const page = () => {
               Read Article
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* 2nd box */}
-        <div className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300">
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300"
+        >
           <img
             src={
               "https://miro.medium.com/v2/format:webp/1*r1ckz81ipEFmOWO8zEfUfw.png"
@@ -69,13 +104,7 @@ const page = () => {
           </p>
           <p className="text-center">
             Solving a DSA (Data Structures and Algorithms) problem can be pretty
-            tough. This article should help you understand how to go about
-            solving a DSA
-            <br />
-            Understand the question completely Look at the question and try to
-            understand it completely. Make sure to run through the examples to
-            verify that your understanding of the problem is correct. How to do
-            that? The input should give the r.......
+            tough...
           </p>
           <div className="flex justify-between items-center w-full px-10 pb-2">
             <div className="flex gap-2">
@@ -94,13 +123,19 @@ const page = () => {
               Read Article
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* 2nd row */}
       <div className="flex w-6/7 h-[410px] items-center justify-around m-5">
-        {/* 1st box  */}
-        <div className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300">
+        {/* 1st box */}
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.5 }}
+          className="h-[400px] w-[45%] bg-[#1e1f29] rounded-tr-4xl rounded-bl-4xl flex flex-col items-center justify-around gap-4 hover:shadow-2xl transition-all duration-300"
+        >
           <img
             src={
               "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*QiGg6l2krK5N95bo"
@@ -112,11 +147,7 @@ const page = () => {
           </p>
           <p className="text-center">
             In this article, I am going to share some tips for solving recursion
-            problems in easy 4 steps.
-            <br />
-            This is a large hurdle that hampers students when they learn
-            recursion. They try to see what is happening at every single
-            function call and try to trace each step in their solution.........
+            problems in easy 4 steps...
           </p>
           <div className="flex justify-between items-center w-full px-10 pb-2">
             <div className="flex gap-2">
@@ -135,9 +166,9 @@ const page = () => {
               Read Article
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

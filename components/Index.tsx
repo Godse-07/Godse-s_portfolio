@@ -107,6 +107,11 @@ export default function HomePage() {
               View Projects <VscArrowRight />
             </Link>
           </div>
+          <div className={styles.actionLinks}>
+            <a href="/Pushan_Mukhopadhyay.pdf" download={"/Pushan_Mukhopadhyay.pdf"} className={styles.primaryLink}>
+              Download Cv <VscArrowRight />
+            </a>
+          </div>
         </div>
       </div>
 
