@@ -1,10 +1,15 @@
 'use client';
 
-import Home_animation from "@/components/Home_animation";
 import React from "react";
 import { motion } from "framer-motion";
+import dynamic from 'next/dynamic';
 
 const Page = () => {
+
+  const Home_animation = dynamic(() => import('@/components/Home_animation'), {
+    ssr: false, // This ensures the component only loads on the client side
+  });
+
   return (
     <div className="flex h-full flex-col items-center justify-center gap-5">
       <motion.div
