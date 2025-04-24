@@ -8,6 +8,8 @@ import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const router = useRouter();
+  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [userDetails, setDetails] = useState<any>(null);
 
   const getDetails = async () => {
