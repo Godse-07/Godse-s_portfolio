@@ -1,8 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Home_animation = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return <div className="ml-25 md:h-[200px] md:w-[200px] lg:h-[200px] lg:w-[200px] hidden lg:block"></div>;
+  }
+
   return (
     <div className="ml-25 md:h-[200px] md:w-[200px] lg:h-[200px] lg:w-[200px] hidden lg:block">
       <Player 
@@ -13,4 +23,5 @@ const Home_animation = () => {
     </div>
   );
 };
+
 export default Home_animation;
