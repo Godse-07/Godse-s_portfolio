@@ -24,7 +24,7 @@ const page = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        I'm always excited to connect with like-minded individuals, collaborate on innovative projects, or simply have a good conversation. <br /> Feel free to drop a message!
+        I&apos;m always excited to connect with like-minded individuals, collaborate on innovative projects, or simply have a good conversation. <br /> Feel free to drop a message!
       </motion.p>
       
       <motion.div 
