@@ -6,6 +6,10 @@ import VsCodeSidebar from "@/components/VsCodeSidebar";
 export const metadata: Metadata = {
   title: "Godse-07 | Portfolio",
   description: "VS portfolio",
+  icons: {
+    icon: "/Godse-07.ico"
+
+  }
 };
 
 export default function RootLayout({

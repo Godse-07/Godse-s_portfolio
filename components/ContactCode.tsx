@@ -3,8 +3,8 @@ import styles from '@/styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'N/A',
-    href: 'N/A',
+    link: 'Personal website',
+    href: 'https://godse.vercel.app/',
   },
   {
     social: 'email',
