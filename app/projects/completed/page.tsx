@@ -711,7 +711,7 @@ const page = () => {
             <p>Firebase</p>
           </div>
           <div className="flex flex-col gap-2">
-            <Image src={"/FastAAI.png"} alt="Fastapi" height={50} width={50} />
+            <Image src={"/FastAPI.png"} alt="Fastapi" height={50} width={50} />
             <p>FastApi</p>
           </div>
         </motion.div>
