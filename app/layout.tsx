@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   description: "VS portfolio",
   icons: {
     icon: [
-      { url: 'favicon.ico' },
-      { url: 'favicon.ico' }
+      { url: '/favicon.ico' }
     ]
   }
 };
