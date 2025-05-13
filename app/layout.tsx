@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: "VS portfolio",
   icons: {
     icon: [
-      { url: '/Godse-07.ico' },
-      { url: '/Godse-07.ico' }
+      { url: 'favicon.ico' },
+      { url: 'favicon.ico' }
     ]
   }
 };
@@ -21,6 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body className={`antialiased`}>
         <div className="w-full fixed top-0 left-0 z-50 bg-[#1e1f29] border-b">
           <Navbar />
