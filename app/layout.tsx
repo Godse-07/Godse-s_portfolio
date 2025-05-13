@@ -7,8 +7,10 @@ export const metadata: Metadata = {
   title: "Godse-07 | Portfolio",
   description: "VS portfolio",
   icons: {
-    icon: "/Godse-07.ico"
-
+    icon: [
+      { url: '/Godse-07.ico' },
+      { url: '/Godse-07.ico' }
+    ]
   }
 };
 
