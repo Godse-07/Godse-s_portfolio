@@ -16,7 +16,6 @@ const Page = () => {
     const details = await fetch("https://api.github.com/users/Godse-07");
     const res = await details.json().catch((err) => console.log(err));
     setDetails(res);
-    console.log(res);
   };
 
   useEffect(() => {
@@ -101,11 +100,12 @@ const Page = () => {
             className="h-[250px] w-2/3 mx-auto bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"
             {...fadeIn}
           >
-            <img
+            <Image
               src="https://github-readme-stats.vercel.app/api?username=Godse-07&theme=vue&hide_border=false&include_all_commits=false&count_private=false"
               alt="GitHub Stats"
               width={500}
               height={120}
+              unoptimized={true}
             />
           </motion.div>
 
@@ -113,11 +113,12 @@ const Page = () => {
             className="h-[250px] w-2/3 mx-auto bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"
             {...fadeIn}
           >
-            <img
+            <Image
               src="https://camo.githubusercontent.com/cc79e8876fa8ed2292fe074e592cff5b51853c47d8dff3291b5e3843f1ace44b/68747470733a2f2f6e69727a616b2d73747265616b2d73746174732e76657263656c2e6170702f3f757365723d476f6473652d3037267468656d653d76756526686964655f626f726465723d66616c7365"
               alt="GitHub Streak Stats"
               width={500}
               height={120}
+              unoptimized={true}
             />
           </motion.div>
         </>
