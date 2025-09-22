@@ -6,6 +6,7 @@ import Extraslider from "@/components/Extraslider";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import CodingSlider from "../../components/Codingslider";
 
 const page = () => {
   const fadeInUp = {
@@ -37,6 +38,54 @@ const page = () => {
         >
           Skills
         </motion.h1>
+
+        {/* Coding languages */}
+
+        <motion.div 
+          className="min-h-[300px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"
+          variants={fadeInUp}
+          whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+        >
+          {/*image and coding text  */}
+          <div className="flex flex-col gap-7 ">
+            <motion.h1 
+              className="text-4xl text-[#f3de8a]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              Coding
+            </motion.h1>
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <motion.div whileHover={{ scale: 1.2, rotate: 5 }}>
+                  <Image src="/Java.png" alt="js" height={30} width={30} />
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.2, rotate: 5 }}>
+                  <Image src="/C.png" alt="ts" height={30} width={30} />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+
+          {/* line */}
+          <motion.div 
+            className="w-[1px] h-32 bg-gray-300 mx-5"
+            initial={{ height: 0 }}
+            animate={{ height: "8rem" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
+
+          {/* slider */}
+          <motion.div 
+            className="p-5 w-1/3 h-[200px]"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <CodingSlider />
+          </motion.div>
+        </motion.div>
 
         <motion.div 
           className="min-h-[300px] w-2/3 bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"

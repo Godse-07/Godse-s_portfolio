@@ -16,7 +16,6 @@ import {
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-
 interface IconItem {
   id: string;
   icon: LucideIcon;
@@ -57,7 +56,6 @@ export const VsCodeSidebar: React.FC = () => {
     </div>
   );
 };
-
 
 const IconSidebar: React.FC<IconSidebarProps> = ({
   activeIcon,
@@ -175,10 +173,12 @@ const FilesPanel: React.FC = () => {
               <ChevronRight size={16} />
             )}
             <span className="ml-1 text-sm">
-              <button onClick={()=>{
-                router.push("/");
-              }}>
-              PORTFOLIO
+              <button
+                onClick={() => {
+                  router.push("/");
+                }}
+              >
+                PORTFOLIO
               </button>
             </span>
           </div>
@@ -200,134 +200,130 @@ const FilesPanel: React.FC = () => {
               {expandedFolders.frontend && (
                 <div className="ml-4">
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                    <button onClick={
-                        ()=>{
+                      <button
+                        onClick={() => {
                           router.push("/home");
-                        }
-                      }>
+                        }}
+                      >
                         Home.tsx
                       </button>
                     </span>
                   </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={()=>{
-                        router.push("/contact");
-                      }}>
-                      Contact.tsx
+                      <button
+                        onClick={() => {
+                          router.push("/contact");
+                        }}
+                      >
+                        Contact.tsx
                       </button>
                     </span>
                   </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/skills")
-                        }
-                      }>
+                      <button
+                        onClick={() => {
+                          router.push("/skills");
+                        }}
+                      >
                         Skills.tsx
                       </button>
                     </span>
                   </div>
 
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/experience/")
-                        }
-                      }>
+                      <button
+                        onClick={() => {
+                          router.push("/experience/");
+                        }}
+                      >
                         Experience.tsx
                       </button>
                     </span>
                   </div>
-                 
+
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/github")
-                        }
-                      }>
+                      <button
+                        onClick={() => {
+                          router.push("/github");
+                        }}
+                      >
                         Github.tsx
                       </button>
                     </span>
                   </div>
 
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/blogs")
-                        }
-                      }>
+                      <button
+                        onClick={() => {
+                          router.push("/blogs");
+                        }}
+                      >
                         Blogs.tsx
                       </button>
                     </span>
                   </div>
 
-
-                  <div
-                className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e]"
-                onClick={() => toggleFolder("backend")}
-              >
-                {expandedFolders.backend ? (
-                  <ChevronDown size={16} />
-                ) : (
-                  <ChevronRight size={16} />
-                )}
-                <span className="ml-1 text-sm">Projects</span>
-              </div>
-
-              {expandedFolders.backend && (
-                <div className="ml-4">
-                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
-                    <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/projects/upcoming/")
-                        }
-                      }>
-                        Upcoming.tsx
-                      </button>
-                    </span>
-                  </div>
                   <div className="flex items-center p-1 cursor-pointer hover:bg-[#2a2d2e] hover:rounded-2xl">
-                    <Image src={"/react.png"} alt="react image" width={20} height={20}/>
+                    <Image
+                      src={"/react.png"}
+                      alt="react image"
+                      width={20}
+                      height={20}
+                    />
                     <span className="ml-1 text-sm">
-                      <button onClick={
-                        ()=>{
-                          router.push("/projects/completed/")
-                        }
-                      }>
-                        Completed.tsx
+                      <button
+                        onClick={() => {
+                          router.push("/projects");
+                        }}
+                      >
+                        Projects.tsx
                       </button>
                     </span>
                   </div>
                 </div>
               )}
-
-
-
-
-                </div>
-
-
-              
-
-
-              )}
-
-           
-
             </div>
           )}
         </div>
@@ -406,7 +402,9 @@ const ContactPanel: React.FC = () => {
       <div className="p-2 text-sm">
         <div className="mb-2">
           <div className="text-gray-400">Email</div>
-          <div className="text-blue-400">mukhopadhyaypushan42 <br /> @gmail.com</div>
+          <div className="text-blue-400">
+            mukhopadhyaypushan42 <br /> @gmail.com
+          </div>
         </div>
         <div className="mb-2">
           <div className="text-gray-400">LinkedIn</div>
