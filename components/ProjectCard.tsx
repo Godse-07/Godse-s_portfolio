@@ -22,8 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               src={projectLogo}
               alt={projectName}
               className="object-contain rounded-lg"
-              width={30}
-              height={30}
+              width={85}
+              height={85}
             />
           )}
           <h2 className="text-2xl font-semibold text-[#f3de8a]">

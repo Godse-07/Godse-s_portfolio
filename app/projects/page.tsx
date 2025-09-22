@@ -6,6 +6,15 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
+    projectLogo: "/StreamiFy.png",
+    projectName: "StreamiFy",
+    projectDescription:
+      "Streamify is a modern language exchange platform that connects learners worldwide through real-time chat, video calls, and cultural collaboration. Built with React and Node.js for a responsive and scalable foundation, the platform leverages the Stream Chat and Stream Video SDKs to deliver seamless, high-quality communication experiences. Secure authentication, intuitive UI, and intelligent matching help users find the right partners based on goals and skill levels, while integrated translation and collaboration tools make conversations more engaging and effective. Designed with a scalable architecture, Streamify ensures smooth accessibility across devices, creating a social and interactive ecosystem where users don’t just learn a language—they live it.",
+    projectSoureceCode: "https://github.com/Godse-07/StreamiFy",
+    projectLiveLink: "https://streamify-jm3a.onrender.com/",
+    projectTechStack: ["/Vite.js.png", "/Node.js.png", "/MongoDB.png" , "/Tailwind CSS.png", "/JavaScript.png"],
+  },
+  {
     projectLogo: "/SpeakToCrack.jpg",
     projectName: "SpeakToCrack",
     projectDescription:
