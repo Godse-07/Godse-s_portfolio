@@ -14,7 +14,7 @@ const BetterSoftware = () => {
               Better Software
             </span>
           </h2>
-          <span className="text-sm text-gray-400">July 2025 - Present</span>
+          <span className="text-sm text-gray-400">July 2025 - Sep 2025</span>
         </div>
 
         {/* Description */}
