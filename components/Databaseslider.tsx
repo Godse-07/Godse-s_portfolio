@@ -7,6 +7,7 @@ const images = [
   "/MySQL.png",
   "/Firebase.png",
   "/Sanity.png",
+  "/Redis.png",
 ];
 
 const Databaseslider = () => {
