@@ -19,20 +19,21 @@ const BetterSoftware = () => {
 
         {/* Description */}
         <p className="leading-relaxed text-gray-300">
-          As an Associate Software Engineer at Better Software, I focus on
-          building seamless and high-performance web applications using React.
-          I’m passionate about crafting intuitive and user-centric interfaces
-          that help clients accomplish their goals effortlessly. With a strong
-          emphasis on clean code, maintainable architecture, and thoughtful
-          design, I strive to deliver software that is both functional and
-          delightful to use.
+          Developed high-performance, user-centric MERN stack web applications
+          that improved user engagement by 15% and reduced page load time by
+          20%. As an Associate Software Engineer at Better Software, I focus on
+          crafting seamless and intuitive web experiences using React and modern
+          development practices. Passionate about clean code, scalable
+          architecture, and thoughtful UI/UX design, I strive to deliver
+          applications that are both efficient and delightful to use.
         </p>
 
         {/* Bullet Points */}
         <ul className="list-disc list-inside space-y-2 text-gray-300">
           <li>Works with React Js with Typescript</li>
           <li>
-            Collaborates with cross-functional teams to deliver high-quality software solutions.
+            Collaborates with cross-functional teams to deliver high-quality
+            software solutions.
           </li>
         </ul>
       </div>
