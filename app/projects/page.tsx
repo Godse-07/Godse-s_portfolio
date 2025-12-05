@@ -11,7 +11,7 @@ const projects = [
     projectDescription:
       "PR Checker is an AI-powered platform that automatically analyzes GitHub pull requests using the Gemini API. It helps developers improve code quality, documentation, and consistency through actionable insights and health scoring. Built with React for a responsive UI and Node.js for backend processing, it integrates seamlessly with GitHub to fetch PR data, analyze code changes, and provide feedback. The platform supports multiple programming languages and offers personalized recommendations, making it an essential tool for developers aiming to enhance their code review process and maintain high standards in collaborative projects.",
     projectSoureceCode: "https://github.com/Godse-07/MergeMind",
-    projectLiveLink: "https://merge-mind.vercel.app/",
+    projectLiveLink: "https://mergemind.me/",
     projectTechStack: ["/Vite.js.png", "/Node.js.png", "/Express.png", "/JavaScript.png", "/MongoDB.png", "/Redis.png", "/Tailwind CSS.png", "/GitHub (1).png", "/Jest.png"],
   },
   {
