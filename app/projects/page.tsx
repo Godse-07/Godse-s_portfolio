@@ -6,13 +6,39 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
+    projectLogo: "/Terminal_chat.jpg",
+    projectName: "Terminal Chat",
+    projectDescription:
+      "Terminal-Chat is a lightweight, no-login chat application inspired by classic terminal aesthetics. Users can instantly join or create chat rooms, share the room link, and chat anonymously in real-time — no database, no history, and no identity required. Built with React, Node.js, Express, and Socket.IO, the app focuses on speed, privacy, and a nostalgic cyber-terminal experience.",
+    projectSoureceCode: "https://github.com/Godse-07/TerminalChat",
+    projectLiveLink: "https://terminal-chat-rosy.vercel.app/room/eppji0",
+    projectTechStack: [
+      "/Vite.js.png",
+      "/Node.js.png",
+      "/Express.png",
+      "/JavaScript.png",
+      "/Socket.IO.png",
+      "/CSS3.png",
+    ],
+  },
+  {
     projectLogo: "/Merge_Mind.jpg",
     projectName: "MergeMind",
     projectDescription:
       "PR Checker is an AI-powered platform that automatically analyzes GitHub pull requests using the Gemini API. It helps developers improve code quality, documentation, and consistency through actionable insights and health scoring. Built with React for a responsive UI and Node.js for backend processing, it integrates seamlessly with GitHub to fetch PR data, analyze code changes, and provide feedback. The platform supports multiple programming languages and offers personalized recommendations, making it an essential tool for developers aiming to enhance their code review process and maintain high standards in collaborative projects.",
     projectSoureceCode: "https://github.com/Godse-07/MergeMind",
     projectLiveLink: "https://mergemind.me/",
-    projectTechStack: ["/Vite.js.png", "/Node.js.png", "/Express.png", "/JavaScript.png", "/MongoDB.png", "/Redis.png", "/Tailwind CSS.png", "/GitHub (1).png", "/Jest.png"],
+    projectTechStack: [
+      "/Vite.js.png",
+      "/Node.js.png",
+      "/Express.png",
+      "/JavaScript.png",
+      "/MongoDB.png",
+      "/Redis.png",
+      "/Tailwind CSS.png",
+      "/GitHub (1).png",
+      "/Jest.png",
+    ],
   },
   {
     projectLogo: "/StreamiFy.png",
@@ -21,7 +47,13 @@ const projects = [
       "Streamify is a modern language exchange platform that connects learners worldwide through real-time chat, video calls, and cultural collaboration. Built with React and Node.js for a responsive and scalable foundation, the platform leverages the Stream Chat and Stream Video SDKs to deliver seamless, high-quality communication experiences. Secure authentication, intuitive UI, and intelligent matching help users find the right partners based on goals and skill levels, while integrated translation and collaboration tools make conversations more engaging and effective. Designed with a scalable architecture, Streamify ensures smooth accessibility across devices, creating a social and interactive ecosystem where users don’t just learn a language—they live it.",
     projectSoureceCode: "https://github.com/Godse-07/StreamiFy",
     projectLiveLink: "https://streamify-jm3a.onrender.com/",
-    projectTechStack: ["/Vite.js.png", "/Node.js.png", "/MongoDB.png" , "/Tailwind CSS.png", "/JavaScript.png"],
+    projectTechStack: [
+      "/Vite.js.png",
+      "/Node.js.png",
+      "/MongoDB.png",
+      "/Tailwind CSS.png",
+      "/JavaScript.png",
+    ],
   },
   {
     projectLogo: "/SpeakToCrack.jpg",
@@ -30,7 +62,12 @@ const projects = [
       "SpeakToCrack is an AI-powered mock interview platform designed to help users prepare for real-world interviews by simulating an interactive and adaptive interview environment. Built with Next.js for a fast and responsive frontend and Firebase for secure authentication and real-time data handling, the platform leverages the Gemini AI API to generate domain-specific questions, evaluate user responses, and provide instant, detailed feedback on communication skills, technical accuracy, and overall confidence. The system allows users to track their progress across multiple sessions, ensuring they can identify weak areas and steadily improve their performance, while its scalable architecture ensures seamless accessibility across devices, making interview preparation more personalized, engaging, and effective.",
     projectSoureceCode: "https://github.com/Godse-07/SpeakToCrack",
     projectLiveLink: "https://speak-to-crack.vercel.app/",
-    projectTechStack: ["/Next.js.png", "/Firebase.png", "/Tailwind CSS.png", "/TypeScript.png"],
+    projectTechStack: [
+      "/Next.js.png",
+      "/Firebase.png",
+      "/Tailwind CSS.png",
+      "/TypeScript.png",
+    ],
   },
   {
     projectLogo: "/InnoX.jpg",
@@ -39,7 +76,12 @@ const projects = [
       "InnoX is a dynamic platform designed to empower innovators and entrepreneurs by providing a seamless space to pitch ideas, receive feedback, and connect with like-minded collaborators. Built using Next.js for a performant and responsive frontend, Sanity for structured content management, and Tailwind CSS for intuitive UI design, the platform enables users to showcase their projects, engage with a community of mentors and peers, and refine their ideas through real-time interactions. With features like curated pitch spaces, networking tools, and personalized dashboards, InnoX fosters collaboration, accelerates idea-to-execution cycles, and helps creators gain visibility, gather actionable insights, and build meaningful partnerships in a structured and innovation-driven environment.",
     projectSoureceCode: "https://github.com/Godse-07/InnoX",
     projectLiveLink: "https://inno-x-ten.vercel.app/",
-    projectTechStack: ["/Next.js.png", "/Sanity.png", "/Tailwind CSS.png", "/TypeScript.png"],
+    projectTechStack: [
+      "/Next.js.png",
+      "/Sanity.png",
+      "/Tailwind CSS.png",
+      "/TypeScript.png",
+    ],
   },
   {
     projectLogo: "/Safe_circle.jpg",
@@ -59,7 +101,12 @@ const projects = [
     projectSoureceCode: "https://github.com/Godse-07/Farmer",
     projectLiveLink:
       "https://drive.google.com/file/d/1BFv2JbluWQ4m-4UL8trnJzX24KqWvb1N/view?usp=drive_link",
-    projectTechStack: ["/Flutter.png", "/Dart.png", "/Firebase.png", "/FastAPI.png"],
+    projectTechStack: [
+      "/Flutter.png",
+      "/Dart.png",
+      "/Firebase.png",
+      "/FastAPI.png",
+    ],
   },
   {
     projectLogo: "/Qmail.jpg",
