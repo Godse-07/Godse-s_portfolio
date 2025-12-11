@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { UserCheck } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const router = useRouter();
-  
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [userDetails, setDetails] = useState<any>(null);
 
@@ -22,10 +22,11 @@ const Page = () => {
     getDetails();
   }, []);
 
-  const fadeIn = {
+  // Mark fadeIn as `any` to avoid strict framer-motion TS type issues
+  const fadeIn: MotionProps = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: [0.42, 0, 0.58, 1] },
   };
 
   return (
