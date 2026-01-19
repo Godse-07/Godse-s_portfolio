@@ -98,29 +98,22 @@ const Page = () => {
           </motion.div>
 
           <motion.div
-            className="h-[250px] w-2/3 mx-auto bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"
+            className="h-[250px] w-2/3 mx-auto bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-center hover:shadow-2xl transition-all duration-300"
             {...fadeIn}
           >
-            <Image
-              src="https://github-readme-stats.vercel.app/api?username=Godse-07&theme=vue&hide_border=false&include_all_commits=false&count_private=false"
-              alt="GitHub Stats"
-              width={500}
-              height={120}
-              unoptimized={true}
-            />
-          </motion.div>
-
-          <motion.div
-            className="h-[250px] w-2/3 mx-auto bg-[#1e1f29] mb-10 p-2 rounded-tr-4xl rounded-bl-4xl flex items-center justify-around hover:shadow-2xl transition-all duration-300"
-            {...fadeIn}
-          >
-            <Image
-              src="https://camo.githubusercontent.com/cc79e8876fa8ed2292fe074e592cff5b51853c47d8dff3291b5e3843f1ace44b/68747470733a2f2f6e69727a616b2d73747265616b2d73746174732e76657263656c2e6170702f3f757365723d476f6473652d3037267468656d653d76756526686964655f626f726465723d66616c7365"
-              alt="GitHub Streak Stats"
-              width={500}
-              height={120}
-              unoptimized={true}
-            />
+            <a
+              href="https://git.io/awesome-stats-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="https://awesome-github-stats.azurewebsites.net/user-stats/Godse-07?cardType=level-alternate&preferLogin=false"
+                alt="GitHub Stats"
+                width={520}
+                height={200}
+                unoptimized
+              />
+            </a>
           </motion.div>
         </>
       ) : (
