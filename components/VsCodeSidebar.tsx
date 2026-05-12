@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { usePortfolioStore } from "@/stores/usePortfolioStore";
+import type { TabItem } from "@/types/portfolio";
 
 interface IconItem {
   id: string;
@@ -42,7 +44,7 @@ export const VsCodeSidebar: React.FC = () => {
   const [isPanelOpen, setIsPanelOpen] = useState<boolean>(true);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       {/* Fixed icon sidebar */}
       <IconSidebar
         activeIcon={activeIcon}
@@ -84,8 +86,7 @@ const IconSidebar: React.FC<IconSidebarProps> = ({
 
   return (
     <div
-      className="bg-[#23242f
-] w-12 flex flex-col items-center pt-2"
+      className="bg-[#23242f] w-12 flex flex-col items-center pt-2 flex-shrink-0"
     >
       {icons.map((item) => (
         <button
@@ -131,7 +132,7 @@ const PanelSidebar: React.FC<PanelSidebarProps> = ({ activeIcon }) => {
   };
 
   return (
-    <div className="bg-[#1e1f29] w-47 h-full overflow-y-auto">
+    <div className="bg-[#1e1f29] flex-1 h-full overflow-y-auto">
       {renderPanelContent()}
     </div>
   );
@@ -146,6 +147,18 @@ const FilesPanel: React.FC = () => {
   });
 
   const router = useRouter();
+  const { openTab } = usePortfolioStore();
+
+  const navigateToFile = (path: string, label: string) => {
+    const tab: TabItem = {
+      id: path,
+      label,
+      path,
+      icon: "/react.png",
+    };
+    openTab(tab);
+    router.push(path);
+  };
 
   const toggleFolder = (folder: string): void => {
     setExpandedFolders((prev) => ({
@@ -208,9 +221,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/home");
-                        }}
+                        onClick={() => navigateToFile("/home", "Home.tsx")}
                       >
                         Home.tsx
                       </button>
@@ -225,9 +236,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/contact");
-                        }}
+                        onClick={() => navigateToFile("/contact", "Contact.tsx")}
                       >
                         Contact.tsx
                       </button>
@@ -242,9 +251,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/skills");
-                        }}
+                        onClick={() => navigateToFile("/skills", "Skills.tsx")}
                       >
                         Skills.tsx
                       </button>
@@ -260,9 +267,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/experience/");
-                        }}
+                        onClick={() => navigateToFile("/experience", "Experience.tsx")}
                       >
                         Experience.tsx
                       </button>
@@ -278,9 +283,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/github");
-                        }}
+                        onClick={() => navigateToFile("/github", "Github.tsx")}
                       >
                         Github.tsx
                       </button>
@@ -296,9 +299,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/blogs");
-                        }}
+                        onClick={() => navigateToFile("/blogs", "Blogs.tsx")}
                       >
                         Blogs.tsx
                       </button>
@@ -314,9 +315,7 @@ const FilesPanel: React.FC = () => {
                     />
                     <span className="ml-1 text-sm">
                       <button
-                        onClick={() => {
-                          router.push("/projects");
-                        }}
+                        onClick={() => navigateToFile("/projects", "Projects.tsx")}
                       >
                         Projects.tsx
                       </button>

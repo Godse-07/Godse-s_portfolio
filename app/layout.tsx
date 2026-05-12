@@ -2,11 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ClientOnly from "@/components/ClientOnly";
 import Navbar from "@/components/Navbar";
-import VsCodeSidebar from "@/components/VsCodeSidebar";
+import StatusBar from "@/components/layout/StatusBar";
+import PanelLayout from "@/components/layout/PanelLayout";
+import BootScreen from "@/components/boot/BootScreen";
+import AchievementToast from "@/components/achievements/AchievementToast";
 
 export const metadata: Metadata = {
-  title: "Godse-07 | Portfolio",
-  description: "VS portfolio",
+  title: "Godse-07 | PushanOS — Developer Portfolio",
+  description:
+    "Pushan Mukhopadhyay's immersive VS Code-themed developer portfolio. Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
+  keywords: [
+    "Pushan Mukhopadhyay",
+    "Full Stack Developer",
+    "Portfolio",
+    "React",
+    "Next.js",
+    "Node.js",
+  ],
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },
@@ -22,17 +34,34 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      {/* keep className on body SSR'd, but render body contents client-side */}
       <body className="antialiased">
         <ClientOnly>
-          <div className="w-full fixed top-0 left-0 z-50 bg-[#1e1f29] border-b">
-            <Navbar />
+          {/* Boot Screen — shown once on first visit */}
+          <BootScreen />
+
+          {/* Main OS Shell */}
+          <div className="os-shell">
+            {/* Top navbar */}
+            <div className="os-navbar">
+              <Navbar />
+            </div>
+
+            {/* Resizable panel layout: Sidebar | Editor | Terminal */}
+            <PanelLayout>{children}</PanelLayout>
+
+            {/* Bottom status bar */}
+            <StatusBar />
           </div>
-          <div className="pt-[30px] flex w-full">
-            <VsCodeSidebar />
-            <main className="flex-1 bg-[#23242f] overflow-auto">{children}</main>
-          </div>
+
+          {/* Achievement toast notifications */}
+          <AchievementToast />
+
+          {/* Subtle CRT scanline overlay */}
+          <div className="scanline-overlay" />
         </ClientOnly>
       </body>
     </html>

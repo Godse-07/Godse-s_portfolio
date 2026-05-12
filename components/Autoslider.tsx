@@ -33,12 +33,13 @@ const Autoslider = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, i) => (
-          <div key={i} className="min-w-full h-full flex-shrink-0 relative">
+          <div key={i} className="min-w-full h-full flex-shrink-0 flex items-center justify-center">
             <Image
               src={img}
               alt={`Slide ${i}`}
-              fill
-              className="object-contain"
+              width={120}
+              height={120}
+              className="object-contain max-h-[120px]"
             />
           </div>
         ))}

@@ -25,12 +25,12 @@ const page = () => {
 
   return (
     <motion.div 
-      className="flex h-full items-center justify-center"
+      className="flex min-h-full"
       initial="initial"
       animate="animate"
       variants={staggerContainer}
     >
-      <motion.div className="h-auto w-screen items-center flex flex-col">
+      <motion.div className="h-auto w-full items-center flex flex-col">
         <motion.h1 
           className="text-5xl text-[#f3de8a] mb-10 mt-15"
           initial={{ opacity: 0, y: -30 }}
@@ -79,7 +79,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -155,7 +155,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -207,7 +207,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -250,7 +250,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -305,7 +305,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -375,7 +375,7 @@ const page = () => {
 
           {/* slider */}
           <motion.div 
-            className="p-5 w-1/3 h-[200px]"
+            className="p-5 w-1/3 h-[200px] overflow-hidden"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
