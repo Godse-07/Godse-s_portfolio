@@ -223,7 +223,7 @@ const COMMANDS: Record<
 };
 
 // Special commands that need store access (handled in component)
-const SPECIAL_COMMANDS = ["sudo hire-pushan", "npm install pushan", "rm -rf bugs", "matrix", "easteregg", "theme"];
+const _SPECIAL_COMMANDS = ["sudo hire-pushan", "npm install pushan", "rm -rf bugs", "matrix", "easteregg", "theme"];
 
 let lineCounter = 0;
 const genId = () => `line-${++lineCounter}-${Date.now()}`;
