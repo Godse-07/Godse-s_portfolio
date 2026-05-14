@@ -99,6 +99,11 @@ const Navbar = () => {
     isTerminalOpen,
   } = usePortfolioStore();
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const handleToggle = (menu: string) => {
     setOpenMenu((prev) => (prev === menu ? null : menu));
   };
@@ -139,7 +144,7 @@ const Navbar = () => {
     },
     { divider: true },
     {
-      label: `${isRecruiterMode ? "✓ " : "  "}Recruiter Mode`,
+      label: `${mounted && isRecruiterMode ? "✓ " : "  "}Recruiter Mode`,
       action: toggleRecruiterMode,
     },
   ];

@@ -35,8 +35,13 @@ export default function BootScreen() {
   const [visibleLines, setVisibleLines] = useState<number[]>([]);
   const [showLogo, setShowLogo] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { isBootComplete, setBootComplete, unlockAchievement } =
     usePortfolioStore();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const completeBoot = useCallback(() => {
     setIsExiting(true);
@@ -94,6 +99,7 @@ export default function BootScreen() {
     };
   }, [isBootComplete, completeBoot]);
 
+  if (!mounted) return null;
   if (isBootComplete) return null;
 
   return (

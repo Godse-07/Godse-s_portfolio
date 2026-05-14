@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Group, Panel, Separator } from "react-resizable-panels";
 import { usePortfolioStore } from "@/stores/usePortfolioStore";
 import VsCodeSidebar from "@/components/VsCodeSidebar";
@@ -21,6 +21,11 @@ export default function PanelLayout({ children }: PanelLayoutProps) {
     toggleTerminal,
   } = usePortfolioStore();
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Keyboard shortcut: Ctrl + ` to toggle terminal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -38,7 +43,7 @@ export default function PanelLayout({ children }: PanelLayoutProps) {
       <Group orientation="horizontal" className="panel-group-horizontal">
         {/* Sidebar Panel */}
         <AnimatePresence>
-          {isSidebarOpen && !isRecruiterMode && (
+          {mounted && isSidebarOpen && !isRecruiterMode && (
             <Panel
               defaultSize="18%"
               minSize="10%"
@@ -60,7 +65,7 @@ export default function PanelLayout({ children }: PanelLayoutProps) {
         </AnimatePresence>
 
         {/* Resize Handle between sidebar and editor */}
-        {isSidebarOpen && !isRecruiterMode && (
+        {mounted && isSidebarOpen && !isRecruiterMode && (
           <Separator className="resize-handle resize-handle--horizontal" />
         )}
 

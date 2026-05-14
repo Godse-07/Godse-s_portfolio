@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { usePortfolioStore } from "@/stores/usePortfolioStore";
 import { usePathname } from "next/navigation";
 import { GitBranch, Bell } from "lucide-react";
@@ -26,6 +26,11 @@ export default function StatusBar() {
     isTerminalOpen,
     toggleTerminal,
   } = usePortfolioStore();
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const currentFile = ROUTE_FILE_MAP[pathname] || {
     file: "Unknown.tsx",
@@ -92,15 +97,15 @@ export default function StatusBar() {
           title="Achievements"
         >
           <Bell size={12} />
-          <span>{unlockedAchievements.length}</span>
+          <span>{mounted ? unlockedAchievements.length : 0}</span>
         </button>
 
         <button
-          className={`status-bar-item status-bar-btn ${isRecruiterMode ? "status-bar-recruiter-active" : ""}`}
+          className={`status-bar-item status-bar-btn ${mounted && isRecruiterMode ? "status-bar-recruiter-active" : ""}`}
           onClick={toggleRecruiterMode}
           title="Toggle Recruiter Mode"
         >
-          {isRecruiterMode ? "👔 Recruiter" : "🎮 Developer"}
+          {mounted && isRecruiterMode ? "👔 Recruiter" : "🎮 Developer"}
         </button>
       </div>
     </motion.div>

@@ -5,6 +5,8 @@ import type {
   Achievement,
   AchievementDefinition,
   ThemeMode,
+  GameType,
+  GameScore,
   PortfolioState,
 } from "@/types/portfolio";
 
@@ -97,6 +99,22 @@ export const usePortfolioStore = create<PortfolioState>()(
       isRecruiterMode: false,
       toggleRecruiterMode: () =>
         set((state) => ({ isRecruiterMode: !state.isRecruiterMode })),
+
+      // ── Games ──────────────────────────
+      currentGame: null,
+      setCurrentGame: (game: GameType) => set({ currentGame: game }),
+      leaderboard: [] as GameScore[],
+      addScore: (game: string, score: number) => {
+        const { leaderboard } = get();
+        const newScore: GameScore = { game, score, date: Date.now() };
+        // Keep top 10 scores per game
+        const updatedLeaderboard = [...leaderboard, newScore]
+          .sort((a, b) => b.score - a.score)
+          .filter((s, idx, self) => 
+            s.game !== game || self.filter(x => x.game === game).indexOf(s) < 10
+          );
+        set({ leaderboard: updatedLeaderboard });
+      },
     }),
     {
       name: "pushan-os-store",
@@ -105,6 +123,7 @@ export const usePortfolioStore = create<PortfolioState>()(
         unlockedAchievements: state.unlockedAchievements,
         theme: state.theme,
         isRecruiterMode: state.isRecruiterMode,
+        leaderboard: state.leaderboard,
       }),
     }
   )

@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePortfolioStore } from "@/stores/usePortfolioStore";
 import { ACHIEVEMENTS } from "@/data/achievements";
+import GameContainer from "../games/GameContainer";
 
 interface TerminalLine {
   id: string;
@@ -62,6 +63,14 @@ const COMMANDS: Record<
       "    matrix            — Enter the Matrix",
       "    easteregg         — ???",
       "    cowsay <msg>      — Moo!",
+      "",
+      "  GAMES",
+      "    game         — Show game launcher",
+      "    snake        — Play Retro Snake",
+      "    pong         — Play CRT Pong",
+      "    bughunt      — Squash some bugs",
+      "    typing       — Hacker typing race",
+      "    matrix       — Enter the Matrix",
       "",
     ],
   },
@@ -220,13 +229,34 @@ const COMMANDS: Record<
       ];
     },
   },
+  game: {
+    description: "Launch a game",
+    execute: () => [
+      "",
+      "  🎮 AVAILABLE GAMES",
+      "  ──────────────────────────────────",
+      "  • snake    — The classic",
+      "  • pong     — CRT retro pong",
+      "  • bughunt  — Fix the codebase!",
+      "  • typing   — Speed breach",
+      "  • matrix   — Visual immersion",
+      "",
+      "  Type the name of the game to start.",
+      "",
+    ],
+  },
+  snake: { description: "Play Snake", execute: () => "__LAUNCH_SNAKE__" },
+  pong: { description: "Play Pong", execute: () => "__LAUNCH_PONG__" },
+  bughunt: { description: "Play BugHunt", execute: () => "__LAUNCH_BUGHUNT__" },
+  typing: { description: "Play Typing Race", execute: () => "__LAUNCH_TYPING__" },
+  matrix: { description: "Enter Matrix", execute: () => "__LAUNCH_MATRIX__" },
 };
 
 // Special commands that need store access (handled in component)
 const _SPECIAL_COMMANDS = ["sudo hire-pushan", "npm install pushan", "rm -rf bugs", "matrix", "easteregg", "theme"];
 
 let lineCounter = 0;
-const genId = () => `line-${++lineCounter}-${Date.now()}`;
+const genId = () => `line-${++lineCounter}`;
 
 export default function Terminal() {
   const [lines, setLines] = useState<TerminalLine[]>([
@@ -241,7 +271,7 @@ export default function Terminal() {
 
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const { unlockAchievement, isAchievementUnlocked, setTerminalOpen } = usePortfolioStore();
+  const { unlockAchievement, isAchievementUnlocked, setTerminalOpen, currentGame, setCurrentGame } = usePortfolioStore();
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -306,20 +336,6 @@ export default function Terminal() {
         const bugAchievement = ACHIEVEMENTS.find((a) => a.id === "bug-hunter");
         if (bugAchievement) unlockAchievement(bugAchievement);
         return "🐛 Error: bugs are protected system files. Nice try though!";
-      }
-
-      if (cmd === "matrix") {
-        const matrixAchievement = ACHIEVEMENTS.find((a) => a.id === "matrix-neo");
-        if (matrixAchievement) unlockAchievement(matrixAchievement);
-        return [
-          "",
-          "  🟢 Wake up, Neo...",
-          "  🟢 The Matrix has you...",
-          "  🟢 Follow the white rabbit.",
-          "",
-          "  (Matrix rain effect coming in Phase 2!)",
-          "",
-        ];
       }
 
       if (cmd === "easteregg") {
@@ -394,6 +410,17 @@ export default function Terminal() {
           return;
         }
 
+        if (result === "__LAUNCH_SNAKE__") { setCurrentGame("snake"); return; }
+        if (result === "__LAUNCH_PONG__") { setCurrentGame("pong"); return; }
+        if (result === "__LAUNCH_BUGHUNT__") { setCurrentGame("bughunt"); return; }
+        if (result === "__LAUNCH_TYPING__") { setCurrentGame("typing"); return; }
+        if (result === "__LAUNCH_MATRIX__") {
+          const matrixAchievement = ACHIEVEMENTS.find((a) => a.id === "matrix-neo");
+          if (matrixAchievement) unlockAchievement(matrixAchievement);
+          setCurrentGame("matrix");
+          return;
+        }
+
         const outputLines: TerminalLine[] = Array.isArray(result)
           ? result.map((line) => ({ id: genId(), type: "output" as const, content: line }))
           : [{ id: genId(), type: "output" as const, content: result }];
@@ -409,7 +436,7 @@ export default function Terminal() {
         ]);
       }
     },
-    [commandCount, isAchievementUnlocked, unlockAchievement, handleSpecialCommand, addLines]
+    [commandCount, isAchievementUnlocked, unlockAchievement, handleSpecialCommand, addLines, setCurrentGame]
   );
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -506,6 +533,10 @@ export default function Terminal() {
           />
         </div>
       </div>
+
+      <AnimatePresence>
+        {currentGame && <GameContainer />}
+      </AnimatePresence>
     </div>
   );
 }

@@ -65,6 +65,14 @@ export interface AiMessage {
 
 export type ThemeMode = 'default' | 'cyberpunk' | 'hacker';
 
+export type GameType = 'snake' | 'bughunt' | 'matrix' | 'typing' | 'pong' | null;
+
+export interface GameScore {
+  game: string;
+  score: number;
+  date: number;
+}
+
 export interface PortfolioState {
   // Boot
   isBootComplete: boolean;
@@ -102,4 +110,10 @@ export interface PortfolioState {
   // Achievement toast queue
   achievementToastQueue: Achievement[];
   dismissAchievementToast: () => void;
+
+  // Games
+  currentGame: GameType;
+  setCurrentGame: (game: GameType) => void;
+  leaderboard: GameScore[];
+  addScore: (game: string, score: number) => void;
 }

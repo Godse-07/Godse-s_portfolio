@@ -61,4 +61,34 @@ export const ACHIEVEMENTS: AchievementDefinition[] = [
     description: "Ran sudo hire-pushan",
     icon: "✅",
   },
+  {
+    id: "snake-pro",
+    name: "Snake Professional",
+    description: "Scored 500+ in Snake",
+    icon: "🐍",
+  },
+  {
+    id: "bug-slayer",
+    name: "Bug Slayer",
+    description: "Squashed 50 bugs in BugHunt",
+    icon: "🔨",
+  },
+  {
+    id: "matrix-master",
+    name: "System Administrator",
+    description: "Watched the Matrix for 1 minute",
+    icon: "🧤",
+  },
+  {
+    id: "speed-typer",
+    name: "Hacker Speed",
+    description: "Completed Typing Race in record time",
+    icon: "⌨️",
+  },
+  {
+    id: "pong-king",
+    name: "Pong King",
+    description: "Beat the AI in Pong",
+    icon: "🏓",
+  },
 ];

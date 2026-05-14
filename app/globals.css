@@ -802,10 +802,80 @@ body {
     opacity: 0;
   }
 
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ── Retro Gaming Styles ────────────────── */
+.retro-game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crt-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 3px 100%;
+}
+
+.scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2));
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 11;
+  animation: scanline-scroll 10s linear infinite;
+}
+
+@keyframes scanline-scroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.neon-border {
+  border: 1px solid #0f0;
+  box-shadow: 0 0 5px #0f0, inset 0 0 5px #0f0;
+}
+
+.pixel-text {
+  image-rendering: pixelated;
+  font-smoothing: none;
+}
+
+.glitch-transition {
+  animation: glitch 0.2s ease-in-out;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
+  40% { transform: translate(-2px, -2px); filter: hue-rotate(180deg); }
+  60% { transform: translate(2px, 2px); filter: hue-rotate(270deg); }
+  80% { transform: translate(2px, -2px); filter: hue-rotate(360deg); }
+  100% { transform: translate(0); }
 }
 
 /* ============================================
